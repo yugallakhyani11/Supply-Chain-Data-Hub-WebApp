@@ -14,19 +14,20 @@ const containerStyle = {
 
 const Map: React.FC<MapProps> = ({ company, locations }) => {
     return (
-        <LoadScript googleMapsApiKey={"AIzaSyCFFgmnEsgLfiR-sJE9Jxtck1"}>
+        <LoadScript googleMapsApiKey={"AIzaSyCFFgmnEsgLfiR-sJE9Jxtck1mgdmi7KgE"}>
             <GoogleMap
-                mapContainerStyle={"ContainerStyle"}
+                mapContainerStyle={containerStyle}
                 center={{ lat: company.latitude, lng: company.longitude }}
-                zoom={10}
+                zoom={8}
             >
                 <MarkerF 
-                    position={{ lat: company.latitude, lng: company.longitude }} 
+                    position={{ lat: company.latitude, lng: company.longitude }} label={company.name} 
                 />
                 {locations.map(location => (
                     <MarkerF
                         key={location.location_id}
-                        position={{ lat: location.latitude, lng: location.longitude }}
+                        position={{ lat: location.latitude, lng: location.longitude }} 
+                        label={location.name}
                     />
                 ))}
             </GoogleMap>
