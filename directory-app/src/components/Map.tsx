@@ -13,54 +13,22 @@ const containerStyle = {
 };
 
 const Map: React.FC<MapProps> = ({ company, locations }) => {
-    const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
-    const markerIcon = {
-        url: 'https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png',
-        scaledSize: new google.maps.Size(40, 40) // Adjust the size as needed
-    };
     return (
-        <LoadScript googleMapsApiKey="AIzaSyCFFgmnEsgLfiR-sJE9Jxtck1mgdmi7KgE">
-             <GoogleMap
-                mapContainerStyle={containerStyle}
+        <LoadScript googleMapsApiKey={"AIzaSyCFFgmnEsgLfiR-sJE9Jxtck1"}>
+            <GoogleMap
+                mapContainerStyle={"ContainerStyle"}
                 center={{ lat: company.latitude, lng: company.longitude }}
-                zoom={13}
+                zoom={10}
             >
-                <MarkerF
-                    position={{ lat: company.latitude, lng: company.longitude }}
-                    icon={markerIcon}
-                    label={{
-                        text: company.name,
-                        color: 'black',
-                        fontSize: '16px',
-                        fontWeight: 'bold'
-                    }}
+                <MarkerF 
+                    position={{ lat: company.latitude, lng: company.longitude }} 
                 />
                 {locations.map(location => (
                     <MarkerF
                         key={location.location_id}
                         position={{ lat: location.latitude, lng: location.longitude }}
-                        icon={markerIcon}
-                        label={{
-                            text: location.name,
-                            color: 'blue',
-                            fontSize: '14px'
-                        }}
-                        onClick={() => setSelectedLocation(location)}
                     />
                 ))}
-                {selectedLocation && (
-                    <InfoWindow
-                        position={{ lat: selectedLocation.latitude, lng: selectedLocation.longitude }}
-                        onCloseClick={() => setSelectedLocation(null)}
-                    >
-                        <div>
-                            <h3>{selectedLocation.name}</h3>
-                            <p>{selectedLocation.address}</p>
-                            <p>Latitude: {selectedLocation.latitude}</p>
-                            <p>Longitude: {selectedLocation.longitude}</p>
-                        </div>
-                    </InfoWindow>
-                )}
             </GoogleMap>
         </LoadScript>
     );
