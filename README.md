@@ -107,7 +107,7 @@ json
   ]
 }
 ```
-Backend Setup
+##Backend Setup
 
     Install dependencies:
 
@@ -124,7 +124,7 @@ sh
     CORS Configuration:
     Ensure that CORS is configured to allow requests from the frontend.
 
-Frontend Setup
+##Frontend Setup
 
     Install dependencies:
 
@@ -138,7 +138,7 @@ sh
 
     npm start
 
-Docker Setup
+##Docker Setup
 
     Build and run the Docker containers:
 
@@ -150,7 +150,7 @@ Docker Setup
         Frontend: http://localhost:3000
         Backend: http://localhost:8000
 
-Google Maps API Integration
+##Google Maps API Integration
 
 This project integrates Google Maps for displaying company locations.
 
