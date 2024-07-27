@@ -1,0 +1,48 @@
+Overview:
+This API provides endpoints to retrieve information about companies and their locations. It uses FastAPI as the web framework and reads data from CSV files.
+Key Components:
+
+Models: Define the structure of our data (Company, Location) and responses (ResponseModel).
+Services: Contain the business logic for retrieving and processing data.
+Controllers: Define the API endpoints and handle request/response flow.
+Utilities: Provide helper functions, such as CSV file reading.
+Exception Handling: Custom exceptions for specific error scenarios.
+
+
+Main Features:
+
+Retrieve all companies
+Retrieve a specific company by ID
+Retrieve all locations for a specific company
+
+
+Data Flow:
+a. Client makes a request to an endpoint.
+b. Controller receives the request and calls the appropriate service method.
+c. Service method reads data from CSV files using utility functions.
+d. Service processes the data and returns a ResponseModel.
+e. Controller returns the ResponseModel to the client.
+Error Handling:
+
+Custom exceptions (NotFoundException, BadRequestException) are used for specific error scenarios.
+Exceptions are caught in controllers and converted to appropriate HTTP responses.
+Logging is implemented for better debugging and monitoring.
+
+
+Response Structure:
+All API responses use a consistent ResponseModel structure:
+
+success: Boolean indicating if the operation was successful.
+message: A descriptive message about the operation result.
+data: The actual data returned (type varies based on the endpoint).
+
+
+Future Improvements:
+
+Implement database integration for more efficient data storage and retrieval.
+Add authentication and authorization mechanisms.
+Implement caching to improve performance for frequently accessed data.
+
+
+
+This API provides a solid foundation for managing company and location data, with a clear structure and consistent error handling. It can be easily extended to include additional features or integrate with other systems as needed.

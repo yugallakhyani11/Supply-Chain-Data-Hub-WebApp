@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# CSV data files (uncomment if you don't want to track these)
+# data/*.csv
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# FastAPI
+.fastapi_cache/
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Mypy cache
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
