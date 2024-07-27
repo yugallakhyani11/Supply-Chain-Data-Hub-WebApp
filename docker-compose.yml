@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./API/app
+    container_name: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./API/app:/app
+
+  frontend:
+    build:
+      context: ./directory-app
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
