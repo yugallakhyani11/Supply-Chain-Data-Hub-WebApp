@@ -50,8 +50,8 @@ The application consists of two main parts:
     ]
   }
 }
-
-Get Company Details by ID
+```
+### Get Company Details by ID
 
 Endpoint: /companies/{id}
 
@@ -60,7 +60,7 @@ Method: GET
 Response:
 
 json
-
+```
 {
   "success": true,
   "message": "Company fetched successfully",
@@ -72,7 +72,7 @@ json
     "longitude": -74.005974
   }
 }
-
+```
 Get All Locations for a Specific Company ID
 
 Endpoint: /companies/{id}/locations
@@ -82,6 +82,7 @@ Method: GET
 Response:
 
 json
+```
 
 {
   "success": true,
@@ -105,7 +106,7 @@ json
     }
   ]
 }
-
+```
 Backend Setup
 
     Install dependencies:
