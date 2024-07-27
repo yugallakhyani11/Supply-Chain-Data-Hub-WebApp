@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #282c34;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+main {
+  padding: 20px;
+}

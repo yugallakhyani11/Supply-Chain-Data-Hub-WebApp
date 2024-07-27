@@ -1,0 +1,42 @@
+.company-details-container {
+    padding: 20px;
+}
+
+.company-details-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.company-name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.company-address {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.locations-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.locations-list {
+    margin-bottom: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.locations-list li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px
+}
